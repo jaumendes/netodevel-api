@@ -7,8 +7,6 @@ pipeline {
                 docker { image 'maven' }
             }
             steps {
-                sh "java -version"
-                sh "mvn --version"
                 sh "mvn package -Dmaven.test.skip=true"
             }
         }
